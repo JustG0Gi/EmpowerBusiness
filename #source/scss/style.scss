@@ -18,9 +18,8 @@ body {
 }
 
 .header {
-	background-image: url('../img/girl.png');
-	background-repeat: no-repeat;
-	@include adaptiv-value("background-size", 1440, 320, 1);
+	background: url('../img/girl.png')0 0/100% auto no-repeat;
+	
 }
 
 .navbar {

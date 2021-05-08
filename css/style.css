@@ -82,9 +82,7 @@ body {
 }
 
 .header {
-  background-image: url("../img/girl.png");
-  background-repeat: no-repeat;
-  background-size: calc(320px + 1120 * ((100vw - 320px) / (1440 - 320)));
+  background: url("../img/girl.png") 0 0/100% auto no-repeat;
 }
 
 .navbar {
