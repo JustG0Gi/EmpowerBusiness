@@ -1,0 +1,158 @@
+// Шрифты
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+// Файл обнуляющих стилей
+@import "_nullstyle";
+// Переменные
+@import "_variables";
+// Миксины
+@import "_mixins";
+
+body {
+	background: $blue;
+}
+
+.container {
+	@include adaptiv-value("width", 1150, 310, 1);
+	margin: 0 auto;
+	@include adaptiv-value("padding", 40, 5, 1);
+}
+
+.header {
+	background-image: url('/img/girl.png');
+	background-repeat: no-repeat;
+	@include adaptiv-value("background-size", 1440, 320, 1);
+}
+
+.navbar {
+	display: flex;
+	flex-flow: wrap;
+	justify-content: space-between;
+
+	&-logo-title {
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 700;
+		@include adaptiv-value("font-size", 24, 14, 1);
+		line-height: 115%;
+		color: $white;
+	}
+
+	&-wrapper {
+		display: flex;
+		flex-flow: wrap;
+
+		&-item {
+			@include adaptiv-value("margin-left", 20, 10, 1);
+
+			&-link {
+				font-family: 'Montserrat', sans-serif;
+				font-weight: 600;
+				@include adaptiv-value("font-size", 14, 10, 1);
+		      line-height: 155%;
+				color: $white;
+
+				&-img {
+					@include adaptiv-value("width", 16, 10, 1);
+				}
+			}
+		}
+	}
+}
+
+.text {
+	display: flex;
+	flex-flow: column wrap;
+	@include adaptiv-value("margin-top", 140, 30, 1);
+	@include adaptiv-value("width", 510, 250, 1);
+
+	&-title {
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 800;
+		@include adaptiv-value("font-size", 58, 25, 1);
+		line-height: 115%;
+		color: $white;
+	}
+
+	&-text {
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 500;
+		@include adaptiv-value("font-size", 20, 13, 1);
+		line-height: 150%;
+		color: $white;
+		@include adaptiv-value("width", 376, 160, 1);
+		@include adaptiv-value("margin-top", 40, 15, 1);
+	}
+
+	&-active {
+		display: flex;
+		flex-flow: wrap;
+		@include adaptiv-value("margin-top", 40, 15, 1);
+
+		&-get {
+			@include adaptiv-value("width", 178.5, 120, 1);
+			background: $orange;
+			text-align: center;
+			border-radius: 20px;
+
+		   &-link {
+				width: 100%;
+				font-family: 'Montserrat', sans-serif;
+		      font-weight: 500;
+		      @include adaptiv-value("font-size", 14, 12, 1);
+				line-height: 75%;
+		      color: $white;
+				padding: 8%;
+		   }
+	   }
+
+		&-learn {
+			@include adaptiv-value("width", 137.7, 100, 1);
+			text-align: center;
+			border: 2px $white solid;
+			border-radius: 20px;
+			margin-left: 20px;
+
+			&-link {
+				width: 100%;
+				font-family: 'Montserrat', sans-serif;
+		      font-weight: 500;
+		      @include adaptiv-value("font-size", 14, 12, 1);
+				line-height: 75%;
+		      color: $white;
+				padding: 9%;
+			}
+		}
+	}
+}
+
+.marketing {
+	display: flex;
+	flex-flow: wrap;
+	justify-content: space-between;
+	@include adaptiv-value("margin-top", 90, 15, 1);
+
+	&-item {
+		@include adaptiv-value("width", 335, 300, 1);
+		margin: 10px;
+		@include adaptiv-value("padding", 33, 15, 1);
+		background: $white;
+
+		&-title {
+			@include adaptiv-value("margin-top", 20, 15, 1);
+			font-family: 'Montserrat', sans-serif;
+		   font-weight: 700;
+		   @include adaptiv-value("font-size", 22, 18, 1);
+			line-height: 120%;
+		   color: $black;
+		}
+
+		&-text {
+			font-family: 'Montserrat', sans-serif;
+		   font-weight: 500;
+		   @include adaptiv-value("font-size", 14, 14, 1);
+			line-height: 120%;
+		   color: $black;
+			@include adaptiv-value("margin-top", 20, 15, 1);
+			width: 80%;
+		}
+	}
+}
