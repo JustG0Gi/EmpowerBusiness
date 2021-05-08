@@ -18,7 +18,7 @@ body {
 }
 
 .header {
-	background-image: url('/img/girl.png');
+	background-image: url('img/girl.png');
 	background-repeat: no-repeat;
 	@include adaptiv-value("background-size", 1440, 320, 1);
 }
