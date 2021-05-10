@@ -14,7 +14,7 @@ body {
 .container {
 	@include adaptiv-value("width", 1150, 310, 1);
 	margin: 0 auto;
-	@include adaptiv-value("padding", 40, 5, 1);
+	@include adaptiv-value("padding", 30, 10, 1);
 }
 
 .header {
@@ -431,7 +431,7 @@ body {
 
 	&-item {
 		width: 155px;
-		margin: 15px;
+		margin: 20px auto;
 	}
 }
 
@@ -481,6 +481,248 @@ body {
 	      @include adaptiv-value("font-size", 14, 12, 1);
 	      line-height: 130%;
 			color: $white;
+		}
+	}
+}
+
+.connect {
+	display: flex;
+	flex-flow: column wrap;
+	@include adaptiv-value("margin-top", 110, 20, 1);
+
+	&-title {
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 700;
+	   @include adaptiv-value("font-size", 40, 22, 1);
+	   line-height: 140%;
+	   color: $white;
+		@include adaptiv-value("width", 280, 250, 1);
+		align-self: center;
+	}
+
+	&-text {
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 500;
+	   @include adaptiv-value("font-size", 14, 12, 1);
+	   line-height: 140%;
+	   color: $white;
+		@include adaptiv-value("width", 440, 250, 1);
+		align-self: center;
+		text-align: center;
+		@include adaptiv-value("margin-top", 17, 10, 1);
+	}
+
+	&-box {
+		display: flex;
+		flex-flow: wrap;
+		justify-content: center;
+		@include adaptiv-value("margin-top", 50, 10, 1);
+
+		&-item {
+			display: flex;
+			flex-flow: column wrap;
+			align-items: center;
+			background: $white;
+			@include adaptiv-value("width", 340, 320, 1);
+			padding: 50px;
+			align-self: center;
+			@include adaptiv-value("margin", 0, 20, 1);
+
+			&-img {
+				width: 72px;
+				height: 72px;
+				margin-bottom: 20px;
+			}
+
+			&-mail {
+				font-family: 'Montserrat', sans-serif;
+		      font-weight: 600;
+	         @include adaptiv-value("font-size", 14, 12, 1);
+	         line-height: 140%;
+	         color: $black;
+				margin-top: 5px;
+			}
+
+			&-title {
+				font-family: 'Montserrat', sans-serif;
+		      font-weight: 700;
+	         @include adaptiv-value("font-size", 16, 14, 1);
+	         line-height: 140%;
+	         color: $black;
+				margin-top: 20px;
+			}
+
+			&-link {
+				width: 160px;
+				height: 44px;
+				text-align: center;
+				font-family: 'Montserrat', sans-serif;
+		      font-weight: 600;
+	         @include adaptiv-value("font-size", 14, 14, 1);
+	         line-height: 140%;
+	         color: $orange;
+				border: $orange 1px solid;
+				border-radius: 5px;
+				margin-top: 20px;
+				padding-top: 11px;
+			}
+		}
+
+		&-item-head {
+			display: flex;
+			flex-flow: column wrap;
+			align-items: center;
+			background: $azure;
+			@include adaptiv-value("width", 340, 320, 1);
+			padding: 85px 50px;
+
+			&-img {
+				width: 72px;
+				height: 72px;
+				margin-bottom: 20px;
+			}
+
+			&-mail {
+				font-family: 'Montserrat', sans-serif;
+		      font-weight: 600;
+	         @include adaptiv-value("font-size", 14, 12, 1);
+	         line-height: 140%;
+	         color: $white;
+				margin-top: 5px;
+			}
+
+			&-title {
+				font-family: 'Montserrat', sans-serif;
+		      font-weight: 700;
+	         @include adaptiv-value("font-size", 16, 14, 1);
+	         line-height: 140%;
+	         color: $white;
+				margin-top: 20px;
+			}
+
+			&-link {
+				width: 160px;
+				height: 44px;
+				text-align: center;
+				font-family: 'Montserrat', sans-serif;
+		      font-weight: 600;
+	         @include adaptiv-value("font-size", 14, 14, 1);
+	         line-height: 140%;
+	         color: $white;
+				border: $white 1px solid;
+				border-radius: 5px;
+				margin-top: 20px;
+				padding-top: 11px;
+			}
+		}
+	}
+}
+
+.contact {
+	display: flex;
+	flex-flow: wrap;
+	justify-content: space-between;
+	@include adaptiv-value("margin-top", 120, 10, 1);
+	@include adaptiv-value("padding-left", 0, 25, 1);
+
+	&-text-title {
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 700;
+	   @include adaptiv-value("font-size", 24, 16, 1);
+	   line-height: 140%;
+	   color: $white;
+	}
+
+	&-text-text {
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 500;
+	   @include adaptiv-value("font-size", 14, 12, 1);
+	   line-height: 140%;
+	   color: $white;
+		@include adaptiv-value("margin-top", 10, 10, 1);
+	}
+
+	&-btn {
+		@include adaptiv-value("padding-top", 0, 15, 1);
+
+		&-link {
+			display: block;
+			width: 160px;
+			height: 58px;
+			text-align: center;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 600;
+	  	   @include adaptiv-value("font-size", 14, 14, 1);
+	 	   line-height: 140%;
+	      color: $white;
+			background: $orange;
+	   	border-radius: 5px;
+	   	margin-top: 5px;
+	   	padding-top: 19px;
+	   }
+   }
+}
+
+.footer {
+	background: linear-gradient(to bottom, #16697a 73%,#252b42 73%);
+
+   .list {
+	   display: flex;
+		flex-flow: wrap;
+		justify-content: space-between;
+
+		&-item {
+			width: 225px;
+			margin: 20px auto;
+		}
+
+		&-item-link-head {
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+	  	   @include adaptiv-value("font-size", 16, 14, 1);
+	 	   line-height: 140%;
+	      color: $white;
+			margin-bottom: 25px;
+		}
+
+		&-item-link {
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 600;
+	  	   @include adaptiv-value("font-size", 14, 12, 1);
+	 	   line-height: 140%;
+	      color: $white;
+			margin-top: 10px;
+
+			&-img {
+				width: 24px;
+				height: 24px;
+				margin-right: 10px;
+			}
+		}
+	}
+
+	.copyright {
+		display: flex;
+		flex-flow: wrap;
+		justify-content: space-between;
+
+		&-title {
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 600;
+	  		@include adaptiv-value("font-size", 14, 12, 1);
+	 		line-height: 140%;
+	   	color: $white;
+			margin-top: 40px;
+		}
+
+		&-social {
+			margin-top: 40px;
+
+			&-img {
+				width: 24px;
+				height: 24px;
+				margin-left: 15px;
+			}
 		}
 	}
 }
